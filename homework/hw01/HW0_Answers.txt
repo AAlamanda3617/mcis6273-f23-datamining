@@ -1,0 +1,107 @@
+§ Task: Create a public Github repo named "mcis6273-f23-datamining" and place a readme.md file in it. Create your first file called README.md at the top level of the repository.
+
+> Have created "mcis6273-f23-datamining" repository and places README.md file in it.
+  As suggested have added Zotero username in it.
+
+§ Task: Fork the course repository:
+> https://github.com/AAlamanda3617/mcis6273-f23-datamining/
+
+§ Task: Please create a markdown document called semester_goals.md with 3 sentences/fragments that answer the following question:
+
+> Have created semester_goals.md by following the given instructions.
+
+(0%) Explore JupyterHub Linux console integrating what you learned in the prior parts of this homework
+> Have learned how to use git clone, git add file, git pull, git push and git commit to successfully upload files to git hub
+
+
+(30%) Listen to the Talk Python To Me from July 7, 2023: How data scientists use Python
+§ Task: PLEASE ANSWER THE FOLLOWING QUESTIONS AFTER LISTENING TO THE PODCAST:
+
+List 3 things that you learned from this podcast?
+    > The podcast introduced various essential tools like PyCharm, Prodigy, and SpaCy commonly used in the industry, broadening my understanding of practical Python applications.
+    > Discovering PyCon as an annual platform for discussions and advancements in the Python programming language shed light on the active community and resources available for Python enthusiasts.
+    > Learning about diverse libraries such as Polar and PyArrow beyond my usual usage of Pandas provided valuable insights for potential future applications.
+
+What is your reaction to the podcast? Pick at least one point brought up in the interview that you agree with and list your reason why.
+    > One point that strongly resonated with me was emphasizing the importance of well-documented Markdown notebooks. Having previously worked on Jupyter notebooks for data analysis, I realized the immense value proper documentation holds. It could have significantly aided my current assignment, saving me from starting anew and improving efficiency.
+
+After listening to the podcast, do you think you are more informed about the importance of Python to Data Science? How? (Be brief – one sentence will suffice.)
+    > The podcast significantly enhanced my understanding of Python's importance in data science by introducing numerous tools and libraries not covered in my academic and industry experiences. The discussion on the role distinctions between data analysts and data scientists highlighted the comprehensive capabilities of Python in building machine learning models.
+
+List one surprising fact you learned from listening to this podcast.
+    > A surprising and intriguing fact was learning about Jodi, with a computer science background, pursuing psychology. The subsequent explanation regarding the integration of data science in behavioral data analysis was enlightening, showcasing the fusion of diverse backgrounds to yield insightful analyses.
+
+(30%) Perfom basic data engineering in Python using Gutenberg.org text of Bertrand Russell’s 1912 work The Problems of Philosophy
+
+I have wrote code to perform tokenization all_word and all_uppercasewords. You can see the respective code in HW0_text_parsing_tokenizing_all_words.ipynb and HW0_text_parsing_tokenizing_all_words.ipynb.
+
+Faced difficulties while trying to retain a few words containing "'" in the word. Need to work on it further. But many words were processed successfully.
+
+§ Task: Answer the following questions:
+
+Which were the 5 most frequent words in all_words.csv were most frequent?
+
+    "the" with a count of 2700
+    "of" with a count of 1883
+    "is" with a count of 1322
+    "to" with a count of 1268
+    "and" with a count of 1008
+
+Which were the 5 most frequent words in all_uppercase_words.csv.
+
+    "The" with a count of 187
+    "I" with a count of 137
+    "But" with a count of 119
+    "It" with a count of 117
+    "Thus" with a count of 113
+
+Compare and contrast these top 5. Explain in 2-3 sentences what you observe about the similariries and differences.
+
+    The most frequent word is "the" in both cases which is a common english stop word
+all words list contains conjuctions like but and it, and uppercase list contians prounouns like I,It show high frequesncy use respectively. 
+And "of" is highly frequent word but not frequent word in Capitalized list
+
+In your own words, what were the most surprising parts of each list?
+
+    'The' and 'of' usage is high in the all_words list which is expected but it seems extremely high.
+Haven't expected 'Thus' as high frequent word which shows repetitive use of the word in text.
+
+(30%) Use structured data to develop basic statistical analyses
+
+§ Task: Remove the stopwords from your all_words.csv and put the remaining non-stopwords in a file all_ns_words.csv. Please retain the frequency column as before.
+
+Have used the stop words provided in the link https://raw.githubusercontent.com/stopwords-iso/stopwords-en/master/stopwords-en.txt
+
+Please refer to the code HW0_part3_stop_word_removal_probability.ipynb for this part.
+
+§ Task: Add a new column to your all_ns_words.csv that contains the probability of that word.
+
+By following the below example have wrote the code to find the probability and used it for sentence likeliness as well.
+
+How many unique non-stop words are in the text?
+    before processing words were 3326 and after processing stop-words total unique non-stop words were 2743.
+
+Which is the least probable word? (if there is a tie, please state the tie words)
+    Total of  1281 words have the frequency of 1 and hence got the same probability as 0.000078
+Have saved the file with all_ns_words_with_sorted_prob.csv
+
+What observation can you make about the probabilities?
+    Probabilities range from the least probable, approximately 0.000078, to the most probable, around 0.02357.
+    Frequency Distribution:
+    There are a significant number of low probability words (around 1281) in contrast to a few high probability words.
+    High Probability Words:
+    Notable high probability words include 'knowledge', 'sense', 'true', 'object', and 'belief'.
+    Prominence of 'Knowledge' and 'Sense':
+    'Knowledge' and 'sense' stand out with notably higher probabilities compared to other words.
+These observations shed light on the distribution and significance of words in the dataset, with 'knowledge' and 'sense' appearing to be particularly prominent in terms of frequency.
+
+hich sentence is more likely:
+If a belief is true, it can be deduced it is universal.
+Criticism of knowledge is counter to scientific results.
+code is shown in ipynb file
+
+as per the below out put sentence 2 is more likely
+Sum of probabilities for sentence 1: 0.009210115516703
+Sum of probabilities for sentence 2: 0.0248204807992506
+
+The same was shown using code in part 3 of HW0
